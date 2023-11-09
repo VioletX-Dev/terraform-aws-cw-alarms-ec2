@@ -14,7 +14,7 @@ This module creates a CloudWatch alarm for all given EC2 instances that presents
 
 ```
 module "example" {
-    source = "github.com/VioletX-Dev/terraform-aws-cw-alarms-alb?ref=main"
+    source = "github.com/VioletX-Dev/terraform-aws-cw-alarms-ec2?ref=main"
 
     alarm_notification_channel = "arn:aws:sns:us-east-1:1234567890:my-sns-notification-channel"
     ec2_names                  = ["ec2_1", "ec2_2", "ec2_3"]
