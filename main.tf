@@ -16,7 +16,7 @@ resource "aws_cloudwatch_metric_alarm" "ec2_cpu_utilization" {
   evaluation_periods  = 2
 
   ## alarm 
-  alarm_name        = "${each.value}-5XX-errors"
+  alarm_name        = "${each.value}-cpu-utilization"
   alarm_description = "Instance ${each.value} is using more than 80% of CPU in 5 minutes. Normal is less than 80%."
   actions_enabled   = "true"
   alarm_actions     = [var.alarm_notification_channel]
